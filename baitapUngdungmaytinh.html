@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập ứng dụng máy tính </title>
+</head>
+<body>
+<h2>Caculator</h2>
+<table>
+    <tr>
+        <td colspan="2"> <input type="number" id="In1" value="12"></td>
+        <td colspan="2"> <input type="number" id="In2" value="12"></td>
+    </tr>
+    <tr>
+        <td id="Addition">
+            <button type="button" onclick="Addition()">Addition(+)</button>
+        </td>
+        <td id="Subtraction">
+            <button type="button" onclick="Subtraction()">Subtraction(-)</button>
+        </td>
+        <td id="Multiplication">
+            <button type="button" onclick="Multiplication()">Multiplication(X)</button>
+        </td>
+        <td id="Division">
+            <button type="button" onclick="Division()">Division(/)</button>
+        </td>
+    </tr>
+</table>
+<br>
+<p id="Result">Đây là kết quả </p>
+<script>
+    function Addition() {
+        let In1 = document.getElementById("In1").value;
+        let In2 = document.getElementById("In2").value;
+        let Result = Number(In1) + Number(In2);
+        document.getElementById("Result").innerHTML = "Result: " + Result;
+    }
+    function Subtraction() {
+        let In1 = document.getElementById("In1").value;
+        let In2 = document.getElementById("In2").value;
+        let Result = Number(In1) - Number(In2);
+        document.getElementById("Result").innerHTML = "Result +" + Result;
+        }
+    function Multiplication() {
+        let In1 = document.getElementById("In1").value;
+        let In2 = document.getElementById("In2").value;
+        let Result = Number(In1) * Number(In2);
+        document.getElementById("Result").innerHTML = "Result:" + Result;
+    }
+    function Division() {
+        let In1 = document.getElementById("In1").value;
+        let In2 = document.getElementById("In2").value;
+        let Result = Number(In1) / Number(In2);
+        document.getElementById("Result").innerHTML = "Result: " + Result;
+    }
+</script>
+</body>
+</html>
