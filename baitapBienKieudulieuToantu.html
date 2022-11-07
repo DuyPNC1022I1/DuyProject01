@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập Sử dụng Biến, Kiểu dữ liệu, Toán tử </title>
+</head>
+<body>
+<script>
+<!--Bài tập nhập điểm, tính điểm trung bình -->
+    let diemVatly = +prompt('Điểm môn Vật lý:');
+    let diemHoa = +prompt('Điểm môn Hóa:');
+    let diemSinhhoc = +prompt('Đểm môn Sinh học:');
+    let diemTrungbinhmon = (diemHoa + diemVatly + diemSinhhoc)/3;
+    document.write('Điểm trung bình môn là '+ diemTrungbinhmon);
+    document.write('<br>');
+//Bài tập chuyển đổi nhiệt độ
+    let Celsius = +prompt('Nhập giá trị của nhiệt độ là');
+    let Fahrenheit = Celsius * 9 / 5 + 32;
+    document.write('Giá trị độ F sau khi chuyển là: ' + Fahrenheit);
+</script>
+</body>
+</html>
