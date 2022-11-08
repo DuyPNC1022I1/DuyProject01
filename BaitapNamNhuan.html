@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<p id="Output"></p>
+<script>
+    let year = +prompt("Nhập số năm vào đây:");
+    let dieuKien1 = year % 4 == 0;
+    let dieuKien2 = year % 100 == 0;
+    let dieuKien3 = year % 100 !== 0;
+    let dieuKien4 = year % 400 == 0;
+    let dieuKien5 = year % 400 !== 0;
+
+    if (dieuKien1 && dieuKien3) {
+        document.getElementById("Output").innerHTML = "Đây là năm nhuận";
+    }
+    else if (dieuKien2 && dieuKien4) {
+        document.getElementById("Output").innerHTML = "Đây là năm nhuận";
+    }
+    else {
+        document.getElementById("Output").innerHTML = "Đây không phải là năm nhuận";
+    }
+</script>
+</body>
+</html>
