@@ -7,26 +7,7 @@
 <body>
 <p id="Output"></p>
 <script>
-    var name = prompt('Nhập vào tên tại đây: ');
 
-    if (name == 'Admin') {
-        var password = prompt('Nhập mật khẩu tại đây:');
-        if (password == 'TheMaster') {
-            document.getElementById("Output").innerHTML = 'Welcome';
-            }
-        else if (password == null) {
-            document.getElementById("Output").innerHTML = 'Canceled';
-        }
-        else {
-            document.getElementById("Output").innerHTML = 'Wrong password';
-        }
-    }
-    else if (name == null) {
-        document.getElementById("Output").innerHTML = 'Canceled';
-    }
-    else {
-        document.getElementById("Output").innerHTML = "I don't know you";
-    }
 </script>
 </body>
 </html>
