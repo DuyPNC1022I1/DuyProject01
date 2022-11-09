@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2>Kiểm tra số ngày của một tháng trong năm 2022 </h2>
+<form >
+<input id="Input" type="number" min="1" max="12" placeholder="Nhập số tháng tại đây:" style="width: 300px">
+<input type="button" onclick="duy()" value="Tính số ngày">
+</form>
+<p id="Result"></p>
+<script>
+    function duy() {
+        let Month = document.getElementById("Input").value;
+        if (Month == 1) {
+            document.getElementById("Result").innerHTML = 'Tháng 1 có 31 ngày ';
+        } else if (Month == 2) {
+            document.getElementById("Result").innerHTML = 'Tháng 2 có 28 hoặc 29 ngày';
+        } else if (Month > 12) {
+            document.getElementById("Result").innerHTML = "Nhập lại. Đây không phải là số tháng";
+        } else
+            document.getElementById("Result").innerHTML = "Tháng vừa nhập có 30 ngày";
+    }
+</script>
+</body>
+</html>
