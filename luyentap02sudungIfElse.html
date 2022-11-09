@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<script>
+<!--Bài 1: Viết chương trình nhập vào giá trị cho a và b. Tính tổng a và b, nếu tổng nhỏ hơn 4, hiển thị chuỗi Below, ngược lại hiển thị Over. Lưu ý sử dụng toán tử ?    -->
+let a = +prompt("Nhập vào giá trị của a: ");
+let b = +prompt("Nhập vào giá trị của b: ");
+let result = (a + b < 4) ? 'Below' : 'Over';
+document.write(result);
+
+//  Viết chương trình nhập vào giá trị cho chuỗi message.
+let Input = prompt('Nhập chuỗi:');
+if (Input == 'Employee') {
+    document.write(' Hello');
+}
+else if (Input == 'Director') {
+    document.write(' Greetings');
+}
+else {
+    document.write('...');
+}
+</script>
+</body>
+</html>
