@@ -7,17 +7,22 @@
 <body>
 <p id = "Demo"></p>
 <script>
-    let sout;
-    sout = "<table border='1' width='400' cellspacing='0'>";
-    for ( i = 1; i < 10; i++) {
-        sout = sout + "<tr>";
-        for (j =1 ; j < 10; j++) {
-            sout = sout + '<td>' + i * j + '</td>';
+     let i = 1;
+     let j = 1
+     let sout;
+     sout = '<table border =1 width="400">';
+     while ( i <= 10 ) {
+        sout = sout + '<tr>';
+        while ( j <= 10) {
+             sout = sout + '<td>' + i * j + '</td>';
+             j++;
         }
-        sout = sout + "<tr>";
-    }
-    sout = sout + "</table>";
-    document.write(sout);
+        sout = sout + '</tr>';
+        i++;
+        j = 1;
+     }
+     sout = sout +'</table>';
+     document.write(sout);
 </script>
 </body>
 </html>
