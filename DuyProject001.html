@@ -7,12 +7,17 @@
 </head>
 <body>
 <script>
-    let x = 1, i;
-    for (i = 0; i < 3; i = i + 2) {
-        x = x + 1;
+    let sout = '<table border=1 width="400';
+    let i,j;
+    for (i = 1; i <= 9; i++) {
+        sout = sout + '<tr>';
+        for ( j = 1; j <= 8; j++) {
+            sout = sout + '<td>' + i + '*' + j + '</td>';
+        }
+        sout = sout + '</tr>';
     }
-    console.log(x);
-    console.log(i);
+    sout = sout + '</table>';
+    document.write(sout);
 </script>
 </body>
 </html>
