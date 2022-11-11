@@ -1,0 +1,234 @@
+<!-- Bài 1: Dùng câu lệnh để hiển thị tên bạn từ hộp thoại
+<!DOCTYPE html>
+<html lang="en-vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2> MINI TEST C1022I1 - Phạm Ngọc Duy  </h2><scrip>
+document.write('Phạm Ngọc Duy - C1022I1');
+</>scrip>
+</body>
+</html>
+
+Bài 2: Dùng câu lệnh để nhận 1 giá trị từ 1 hộp thoại. Sau đó hiển thị bình phương của giá trị vừa nhập.
+<!DOCTYPE html>
+<html lang="en-vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2> MINI TEST C1022I1 - Phạm Ngọc Duy  </h2>
+<script>
+let Number = +prompt('Nhập vào một số bất kỳ');
+let Result = Number ** 2;
+document.write(Result);
+</>script>
+</body>
+</html>
+-->
+
+<!--Bài 3. Viết các bước để code nhận a và b từ 2 ô input và hiển thị S = a*b ra thẻ h1. (Viết rõ b1: …, b2: …, b3: …)
+<!DOCTYPE html>
+<html lang="en-vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2> MINI TEST C1022I1 - Phạm Ngọc Duy  </h2>
+<input id="A" type="number" placeholder="Nhập giá trị của a tại đây">
+<input id="B" type="number" placeholder="Nhập giá trị của b tại đây">
+<h1 id = "S"><button onclick="Bai3()">Click vào đây để hiển thị giá trị của S = a*b</button></h1>
+<script>
+function Bai3() {
+var a = Number(document.getElementById("A").value);
+var b = Number(document.getElementById("B").value);
+var S = Number(a) * Number(b);
+document.getElementById("S").innerHTML = 'Giá trị của S là: ' + S;
+}
+</script>
+</body>
+</html>
+--->
+
+
+<!-- Bài 4.a.Nhập vào a, hiển thị ra chu vi và diện tích của hình vuông độ dài cạnh a
+<!DOCTYPE html>
+<html lang="en-vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2> MINI TEST C1022I1 - Phạm Ngọc Duy  </h2>
+
+<p> <input type="Number" id="A" placeholder="Nhập giá trị a tại đây"></p>
+<p id="Chuvi">
+    <button onclick="Chuvi()">Chu vi</button>
+</p>
+<p id="Dientich"></p>
+    <button onclick="Dientich()">Dientich</button>
+
+<script>
+    function Chuvi() {
+        var a = Number(document.getElementById("A").value);
+        let chuvi = Number(a) * 4;
+        document.getElementById("Chuvi").innerHTML = chuvi;
+     }
+
+    function Dientich() {
+        var a = Number(document.getElementById("A").value);
+        let dientich = Number(a) * Number(a);
+        document.getElementById("Dientich").innerHTML = dientich;
+    }
+</script>
+</body>
+</html>
+-->
+
+<!--b.	Nhập vào a và b, tính a^2, a^b
+<!DOCTYPE html>
+<html lang="en-vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2> MINI TEST C1022I1 - Phạm Ngọc Duy  </h2>
+<input type="number" id="A" placeholder="Nhập giá trị a tại đây"><br>
+<input type="number" id="B" placeholder="Nhập giá trị b tại đây"><br>
+<p id="A^2">
+    <button onclick="Result1()">a^2</button>
+</p>
+<p id="A^B">
+    <button onclick="Result2()">a^b</button>
+</p>
+<script>
+    var a = +document.getElementById("A").value;
+    var b = +document.getElementById("B").value;
+
+    function Result1() {
+        result1 = a ** 2;
+        document.getElementById("A^2").innerHTML = 'Giá trị của a^2 là:' + result1;
+    }
+
+    function Result2() {
+        result2 = a ** b;
+        document.getElementById("A^B").innerHTML = 'Giá trị của a^b là:' + result2;
+    }
+</script>
+</body>
+</html>
+-->
+
+<!--4 c.Nhập vào a và b, tính tổng các số từ a đến b
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2> MINI TEST C1022I1 - Phạm Ngọc Duy  </h2>
+<input type="number" id="A" placeholder="Nhập giá trị a tại đây">
+<input type="number" id="B" placeholder="Nhập giá trị b tại đây">
+<p id="Result">
+    <button onclick="SUM()">Click vào đây để hiển thị tổng chuỗi a -> b </button>
+</p>
+<script>
+    function SUM() {
+        let a = +document.getElementById("A").value;
+        let b = +document.getElementById("B").value;
+        sohang = ( b - a )+1;
+        Sum1 = (( a+ b ) * sohang) / 2;
+        document.getElementById("Result").innerHTML = 'Tổng dãy là: ' + Sum1;
+    }
+</script>
+</body>
+</html>
+-->
+
+<!--4.d.Nhập vào a là năm, in ra thế kỷ của năm đó.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2>MINI TEST C1022I1 - Phạm Ngọc Duy </h2>
+<input type="number" id="A" placeholder="Nhập giá trị a tại đây">
+<p id="Result">
+    <button onclick="THEKY()">Click tại đây để kiểm tra thế kỷ của năm vừa nhập</button>
+</p>
+<script>
+    function THEKY(){
+        let Year = parseInt(document.getElementById("A").value);
+        let CHECK = parseInt((Year/100)+1);
+        document.getElementById("Result").innerHTML = 'Thế kỷ của năm vừa nhập là' + CHECK;
+    }
+</script>
+</body>
+</html>
+-->
+
+<!--4e.Nhập vào a, b, c, kiểm tra xem a, b, c có phải là 3 cạnh của: tam giác cân-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2>MINI TEST C1022I1 - Phạm Ngọc Duy </h2>
+<input type="number" id="A" placeholder="Nhập a vào đây">
+<input type="number" id="B" placeholder="Nhập b vào đây">
+<input type="number" id="C" placeholder="Nhập c vào đây">
+<p id="Result"></p>
+   <button onclick="CHECK()">Check có phải là tam giác hay không?</button>
+</p>
+
+<script>
+    function CHECK() {
+        let a = +document.getElementById("A").value;
+        let b = +document.getElementById("B").value;
+        let c = +document.getElementById("C").value;
+        if ((a + b > c) && (a + c) > b && (b + c) > a) {
+            document.getElementById("Result").innerHTML = 'a , b, c thỏa mãn điều kiện là 3 cạnh của một tam giác';
+            if ((a == b) || (a == c) || (b == c)) {
+                document.getElementById("Result").innerHTML = 'a , b, c là 3 cạnh của tam giác cân';
+               }
+            else if (a == b && b == c) {
+                document.getElementById("Result").innerHTML = 'a , b, c là 3 cạnh của tam giác đều';
+            }
+            else if ((a**2 == b**2 + c**2) || (b**2 == a**2 + c**2) || (c**2 == b**2 + a**2)) {
+                document.getElementById("Result").innerHTML = 'a , b, c là 3 cạnh của tam giác vuông';
+            }
+        }
+        else {
+            document.getElementById("Result").innerHTML = 'a , b, c không thỏa mãn điều kiện là 3 cạnh của một tam giác';
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
