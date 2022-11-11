@@ -6,25 +6,13 @@
     <title>Web test bai hoc </title>
 </head>
 <body>
-<h2>MINI TEST C1022I1 - Phạm Ngọc Duy </h2>
-<input type="number" id="A" placeholder="Nhập a vào đây">
-<input type="number" id="B" placeholder="Nhập b vào đây">
-<input type="number" id="C" placeholder="Nhập c vào đây">
-<p id="Result">
-<button onclick="CHECK()">Check có phải là tam giác hay không?</button>
-</p>
-
 <script>
-    function CHECK() {
-        let a = +document.getElementById("A").value;
-        let b = +document.getElementById("B").value;
-        let c = +document.getElementById("C").value;
-        if ((a**2 == b**2 + c**2) || (b**2 == a**2 + c**2) || (c**2 == b**2 + a**2))
-            document.getElementById("Result").innerHTML = 'a , b, c là 3 cạnh của tam giác vuông';
-        else {
-            document.getElementById("Result1").innerHTML = 'a , b, c không thỏa mãn điều kiện là 3 cạnh của một tam giác';
-            }
-        }
+    let x = 1, i;
+    for (i = 0; i < 3; i = i + 2) {
+        x = x + 1;
+    }
+    console.log(x);
+    console.log(i);
 </script>
 </body>
 </html>

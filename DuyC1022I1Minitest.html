@@ -208,10 +208,10 @@ document.getElementById("S").innerHTML = 'Giá trị của S là: ' + S;
         let c = +document.getElementById("C").value;
         if ((a + b > c) && (a + c) > b && (b + c) > a) {
             document.getElementById("Result").innerHTML = 'a , b, c thỏa mãn điều kiện là 3 cạnh của một tam giác';
-            if ((a == b) || (a == c) || (b == c)) {
-                document.getElementById("Result").innerHTML = 'a , b, c là 3 cạnh của tam giác cân';
-               }
-            else if (a == b && b == c) {
+            if (a == b && b == c) {
+                document.getElementById("Result").innerHTML = 'a , b, c là 3 cạnh của tam giác đều';
+            }
+            else if ((a == b) || (a == c) || (b == c)) {
                 document.getElementById("Result").innerHTML = 'a , b, c là 3 cạnh của tam giác đều';
             }
             else if ((a**2 == b**2 + c**2) || (b**2 == a**2 + c**2) || (c**2 == b**2 + a**2)) {
