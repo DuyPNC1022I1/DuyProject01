@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2> Sample Screen: </h2>
+<input type="text" id="Input">
+<button type="button" id="Add" onclick="Add_element()" value="Add">Add</button>
+<button type="button" id="Display" onclick="Display_element()" value="Display">Display</button>
+<p id="Result"></p>
+<script>
+    let chisophantumang = 0;
+    let array = Array();
+    function Add_element() {
+        array[chisophantumang] = document.getElementById("Input").value;
+        alert('Element' + array[chisophantumang] + '=' + chisophantumang);
+        chisophantumang++;
+        document.getElementById("Input").value = "";
+    }
+    function Display_element() {
+        let e = "<hr>";
+        for ( let i = 0; i < array.length; i++) {
+            e += 'Element' + i + '=' + array[i] + '<br>';
+        }
+        document.getElementById("Result").innerHTML = e;
+    }
+</script>
+</body>
+</html>
