@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<script>
+    /* Bài 1: Cho trước 1 mảng n phần tử.
+    Viết chương trình để in ra số lượng các số chẵn trong mảng.
+    var array = Array(n); // Tạo mảng array với n phần tử
+    var count = 0; // Tạo biến count để đếm số phần tử chẵn trong mảng
+    for ( let i = 0; i < array.length; i++ ) { // Duyệt mảng array
+        if (array[i] % 2 === 0) {  // Tìm phần tử chẵn trong mảng array
+            count = count + 1; // Tăng giá trị count lên 1 cho mỗi lần tìm thấy số chẵn trong mảng
+        }
+        docunment.write(count) // In ra giá trị count: là số lượng phần tử chẵn trong mảng
+    }
+    */
+
+    /* Bài 2: Cho trước 1 mảng n phần tử
+    Viết chương trình cho phép đếm xem có bao nhiêu phần tử a ( Giá trị a nhập vào từ bàn phím)
+    var array = Array(n);
+    var a = prompt('Nhập giá trị a bất kỳ tại đây: ');
+    var count = 0;
+    for ( let i = 0; i < array.length; i++) {
+        if (array[i] === a) {
+            count = count + 1;
+        }
+        document.write(count);
+    }
+    */
+
+    /* Bài 3: Cho trước 1 mảng n phần tử
+       Viết hàm tính tổng các số nguyên tố trong mảng
+     */
+    let  array = Array(n);
+    let count = 0; // Đếm ước số của phần tử trong mảng đang xét
+    for ( let i = 0; i < array.length; i++) { // Duyệt phần tử trong mảng
+        for (let j = 2; j < (array[i] - 1); j++) { // Kiểm tra có phải là số nguyên tố không?
+            if ((array[i] % j) !== 0) {
+                count += 1;
+                if (count !== 0) {
+
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
