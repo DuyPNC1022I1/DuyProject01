@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2> Temperature Converter</h2>
+<p>Type a value in the Fahrenheit field to convert the value to Cencius </p>
+<label> Fahrenheit </label>
+<input id="Input" type="number" value="1">
+<button onclick="changeTemp()">Click to change temp</button> <br>
+<dev id="Result"></dev>
+<script>
+//Xây dựng hàm để chuyển đổi từ độ F cho trước sang độ C theo công thức sau: C = (F - 32)/1.8. Giao diện mẫu như sau:
+function changeTemp() {
+    let fahrenheit = document.getElementById("Input").value;
+    let celcius = (fahrenheit - 32) / (18 / 10);
+    document.getElementById("Result").innerHTML = 'Celcius: ' + celcius;
+}
+</script>
+</body>
+</html>
