@@ -43,7 +43,7 @@ Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị �
 -->
 
 
-<!--Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.-->
+<!--Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,10 +54,83 @@ Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị �
 <body>
 <dev id="RESULT"></dev>
 <script>
-
+    function functionDemo(thamso1, thamso2) {
+        if (thamso1 > thamso2) {
+            alert('Tham so thu 01 > Tham so thu 02');
+        }
+        else (thamso1 < thamso02) {
+            return thamso2 + thamso2;
+        }
+    }
 </script>
 </body>
 </html>
+-->
 
+<!--Bai 4: Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau để bạn có thể nhìn thấy giá trị của biến result trước và sau lời gọi hàm. Đoạn mã có dạng như sau:
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<dev id="RESULT"></dev>
+<script>
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return alert(result);
+    }
+    result = 0;
+    result1 = addNumbers();
+    alert(result1);
+</script>
+</body>
+</html>
+-->
 
+<!--Bai 5:-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<dev id="Result"></dev>
+<script>
+    let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+    function check_star(star) {
+        let indexArray1 = 0;
+        let result = "";
+        for (let i = 0; i < array1.length; i++) {
+            if (star == array1[i]) {
+                indexArray1 = i;
+                for(let j = 0; j < array2.length; j++) {
+                    if (indexArray1 == j) {
+                        result = array2[j];
+                        return result;
+                    } else {
+                        result = "Không tìm thấy chòm sao"
+                        return result;
+                    }
+                }
+            } else {
+                result = "Không tìm thấy sao";
+                return result;
+            }
+        }
+
+    }
+    let star = prompt("Nhập vào ngôi sao: ")
+    document.write(check_star(star));
+</script>
+</body>
+</html>

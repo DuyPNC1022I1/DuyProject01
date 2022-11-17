@@ -6,6 +6,7 @@
     <title>Web test bai hoc </title>
 </head>
 <body>
+<dev id="Result"></dev>
 <script>
  /*
  mangDemo.reverse() : đảo ngược sắp xếp phần tử trong mảng;
@@ -26,17 +27,33 @@
  mangDemo.split() : chuyển một chuỗi thành mảng
 */
 
- let string = "The Quick Brown Fox";
- let array = string.split("");
- for ( let i = 0; i < array.length; i++) {
-     if (array[i] == array[i].toUpperCase()) {
-         array[i] = array[i].toLowerCase();
+ let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+ let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+ function check_star(star) {
+     let indexArray1 = 0;
+     let result = "";
+     for (let i = 0; i < array1.length; i++) {
+         if (star == array1[i]) {
+             indexArray1 = i;
+             for(let j = 0; j < array2.length; j++) {
+                 if (indexArray1 == j) {
+                     result = array2[j];
+                     return result;
+                 } else {
+                     result = "Không tìm thấy chòm sao"
+                     return result;
+                 }
+             }
+         } else {
+             result = "Không tìm thấy sao";
+             return result;
+         }
      }
-     else if (array[i] == array[i].toLowerCase()) {
-         array[i] = array[i].toUpperCase();
-     }
+
  }
- document.write(array.join(""))
-</script>`
+ let star = prompt("Nhập vào ngôi sao: ")
+ document.write(check_star(star));
+</script>
 </body>
 </html>
