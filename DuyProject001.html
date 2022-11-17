@@ -26,15 +26,17 @@
  mangDemo.split() : chuyển một chuỗi thành mảng
 */
 
- let string = prompt('Nhap chuoi bat ky tai day: ');
- let array = string.toString().split("");
- let upper = ABCDEFGHIJKLMNOPQRSTUVWXYZ;
- let lower = abcdefghijklmnopqrstuvwzxyz;
- for (let i = 0; i < array.length; i++) {
-     if (array[i] === ){
-
+ let string = "The Quick Brown Fox";
+ let array = string.split("");
+ for ( let i = 0; i < array.length; i++) {
+     if (array[i] == array[i].toUpperCase()) {
+         array[i] = array[i].toLowerCase();
+     }
+     else if (array[i] == array[i].toLowerCase()) {
+         array[i] = array[i].toUpperCase();
+     }
  }
-
-</script>
+ document.write(array.join(""))
+</script>`
 </body>
 </html>
