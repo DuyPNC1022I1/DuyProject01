@@ -27,33 +27,26 @@
  mangDemo.split() : chuyển một chuỗi thành mảng
 */
 
- let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
- let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
-
- function check_star(star) {
-     let indexArray1 = 0;
-     let result = "";
-     for (let i = 0; i < array1.length; i++) {
-         if (star == array1[i]) {
-             indexArray1 = i;
-             for(let j = 0; j < array2.length; j++) {
-                 if (indexArray1 == j) {
-                     result = array2[j];
-                     return result;
-                 } else {
-                     result = "Không tìm thấy chòm sao"
-                     return result;
-                 }
-             }
-         } else {
-             result = "Không tìm thấy sao";
-             return result;
+ /* Bai 1:
+function binhphuong(number) {
+    return number * number;
+}
+let number = 2;
+document.write(binhphuong(2));
+*/
+ function checkPrime(number) {
+     let flag = true; // Tạo biến Flag: Boolen sử dụng trong các bài toán Check
+     for (let i = 2; i < number; i++) {   // Kiểm tra số number đã cho có chia hết cho các số từ 2 -> (number-1) ?
+         if ((number % i) === 0) {    //
+             flag = false;// Nếu kết quả flag là false -> Không là số nguyên tố
+             break;
          }
      }
-
+     return flag; // Kết quả flag là true-> Là số nguyên tố
  }
- let star = prompt("Nhập vào ngôi sao: ")
- document.write(check_star(star));
+ let result = checkPrime(999)
+ alert(result);
+
 </script>
 </body>
 </html>

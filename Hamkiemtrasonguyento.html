@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body onload="Check()">
+<dev id="Result"></dev>
+<script>
+ function checkPrime(number) {
+     let flag = true; // Tạo biến Flag: Boolen sử dụng trong các bài toán Check
+     for (let i = 2; i < number; i++) {   // Kiểm tra số number đã cho có chia hết cho các số từ 2 -> (number-1) ?
+         if ((number % i) === 0) {    //
+             flag = false;// Nếu kết quả flag là false -> Không là số nguyên tố
+             break;
+         }
+     }
+     return flag; // Kết quả flag là true-> Là số nguyên tố
+ }
+
+ function Check(){
+     let array = Array();
+     for (let i = 2; i < 1000; i++) {
+         if (checkPrime(i)) {
+             array.push(i);
+         }
+     }
+     document.getElementById("Result").innerHTML = array.join();
+ }
+</script>
+</body>
+</html>
