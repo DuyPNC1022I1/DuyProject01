@@ -12,20 +12,22 @@
  Sau khi thực thi chương trình sẽ trả về dạng như sau :
      "Red,Green,White,Black"
  let myColor = ['Red', 'Green', 'White', 'Black'];
- document.write('"' + myColor.toString() + '"');
+ document.write(myColor.join(""));
 
  Bai 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn. Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.
- let str = prompt('Nhập một số bất kỳ tại đây: ');
- let result = [str[0]];
- for(let i=1; i<str.length; i++) {
-     if((str[i-1]%2 === 0)&&(str[i]%2 === 0)) {
-         result.push('-', str[i]);
+ let number = prompt(Nhap so bat ky tai day:');
+ let newNumber = number.toString().split("");
+ let array = [newNumber[0]];
+ for ( let i = 1; i < newNumber.length; i++) {
+     if ((newNumber[i-1]%2===0) && (newNumber[i]%2===0)) {
+         array.push('-', newNumber[i]);
      }
      else {
-         result.push(str[i]);
+         array.push(newNumber[i]);
      }
  }
- console.log(result.join(''));
+document.write(array.join(''));
+*/
 
  Bai 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa. Ví dụ: nếu bạn nhập vào chuỗi 'The Quick Brown Fox' kết quả của chương trình là 'tHE qUICK bROWN fOX'.
 
