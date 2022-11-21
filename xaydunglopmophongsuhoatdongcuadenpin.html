@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<dev id="Result"></dev>
+<script>
+  class Battery {
+      constructor(energy) {
+          this.energy = energy;
+      }
+      setEnergy(enery) {
+          this.energy = enery;
+      }
+      getEnergy() {
+          return this.energy
+      }
+      decreaseEnergy() {
+          if (this.energy > 0) {
+              this.energy--;
+          }
+      }
+  }
+  class FlashLamp {
+      setBattery(battery) {
+          this.battery = battery;
+      }
+      getBatteryInfo() {
+          return this.battery.getEnergy()
+      }
+      light() {
+          if (this.status) {
+              alert('Lighting ON')
+          } else {
+              alert('Lingting OFF')
+          }
+      }
+      turnOn() {
+          this.status = true;
+      }
+      turnOff() {
+          this.status = false;
+      }
+  }
+  let battery = new Battery();
+  battery.getEnergy(90);
+
+  let flashLamp = new FlashLamp();
+  flashLamp.setBattery(battery);
+
+  document.write("Turn on<br/>")
+  flashLamp.turnOn();
+  flashLamp.light();
+  document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+  document.write("Turn off<br/>")
+  flashLamp.turnOff();
+  flashLamp.light();
+</script>
+</body>
+</html>
