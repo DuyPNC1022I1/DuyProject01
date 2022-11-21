@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body onload>
+<b>Iphone</b>
+<br>
+<textarea id="Iphone" cols="20" rows="5"></textarea>
+<button id="IphoneSend" onclick="Iphone">Send</button>
+<button id="IphoneRecived" onclick="">Recived</button>
+<br>
+<b>Samsung</b>
+<br>
+<textarea id="Samsung" cols="20" rows="5"></textarea>
+<button id="SamsungSend" onclick="">Send</button>
+<button id="SamsungRecived" onclick="">Recived</button>
+<dev id="Result"></dev>
+<script>
+    class Mobile {
+        constructor(name, battery, draftMess, inbox, outbox, status  ) {
+            this.name = name;
+            this.battery = battery;
+            this.draftMess = draftMess;
+            this.inbox = inbox;
+            this.outbox = outbox;
+            this.status = status;
+        }
+        getName() {
+            return this.name
+        }
+        setName(name) {
+            this.name = name;
+        }
+        getBattery() {
+            return this.battery;
+        }
+        setBattery(value) {
+            this.battery = value;
+        }
+        getDraftMess() {
+            return this.draftMess;
+        }
+        setDraftMess(value) {
+            this.draftMess = value;
+        }
+        getInbox() {
+            return this.inbox;
+        }
+        setInbox(value) {
+            this.inbox = value;
+        }
+        getOutbox() {
+            return this.inbox;
+        }
+        setOutbox(value) {
+            this.outbox = value;
+        }
+        getStatus() {
+            return this.status;
+        }
+        setStatus(value) {
+            this.status = value;
+        }
+        turnOn() {
+            if (this.status) {
+                this.status = false;
+            } else {
+                this.status = true;
+            }
+        }
+        charge() {
+            this.pin = 100;
+        }
+
+        draft() {
+            let mess = document.getElementById("mess" + this.name);
+            this.draftMess = mess;
+            this.pin--;
+        }
+        displayInbox() {
+            let output = "";
+            for (let i = 0; i < this.inbox.length; i++) {
+                output += this.inbox[i] + "<br/>";
+            }
+            document.getElementById("inboxNokia").innerHTML = output;
+            this.pin--;
+        }
+
+        sendSms(mobile) {
+            let mess = document.getElementById("mess" + this.name).value;
+            this.outbox.push(mess) //push vào outbox của đối tượng hiện tại
+            mobile.inbox.push(mess); //push vào inbox của đối tượng nhận tin nhắn
+            this.pin--;
+        }
+    }
+
+    let Iphone = new Phone("Iphone", 100, "", [], [], true);
+    let Samsung = new Phone("Nokia", 100, "", [], [], true);
+    Iphone.sendSms(Samsung);
+    }
+
+</script>
+</body>
+</html>
