@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<canvas id="Mycanvas"></canvas>
+<p id="Result"></p>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth() {
+            return this.width;
+        }
+        getHeight() {
+            return this.height;
+        }
+        setWidth(width) {
+            this.width = width;
+        }
+        setHeight(height) {
+            this.height = height;
+        }
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+        getArea() {
+            return (this.width * this.height);
+        }
+    }
+    let test = new Rectangle();
+    test.setHeight(2);
+    test.setWidth(2);
+    let Area = test.getArea();
+    let Perimeter = test.getPerimeter();
+    document.getElementById("Result").innerHTML = 'Dien tich là: ' + Area + 'Chu vi là: ' + Perimeter;
+
+    let canvas = document.getElementById("Mycanvas");
+    let ctx = canvas.getContext('2d');
+    ctx.fillStyle='#fa4b2a';
+    ctx.fillRect(10, 10, test.getWidth(), test.getHeight());
+</script>
+</body>
+</html>
