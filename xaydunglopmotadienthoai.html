@@ -9,14 +9,14 @@
 <b>Iphone</b>
 <br>
 <textarea id="Iphone" cols="20" rows="5"></textarea>
-<button id="IphoneSend" onclick="Iphone">Send</button>
+<button id="IphoneSend" onclick="Iphone.sendSms(Samsung)">Send</button>
 <button id="IphoneRecived" onclick="">Recived</button>
 <br>
 <b>Samsung</b>
 <br>
 <textarea id="Samsung" cols="20" rows="5"></textarea>
-<button id="SamsungSend" onclick="">Send</button>
-<button id="SamsungRecived" onclick="">Recived</button>
+<button id="SamsungSend" onclick="Samsung.sendSms()">Send</button>
+<button id="SamsungRecived" onclick="Samsung.displayInbox()">Recived</button>
 <dev id="Result"></dev>
 <script>
     class Mobile {
@@ -91,8 +91,8 @@
 
         sendSms(mobile) {
             let mess = document.getElementById("mess" + this.name).value;
-            this.outbox.push(mess) //push vào outbox của đối tượng hiện tại
-            mobile.inbox.push(mess); //push vào inbox của đối tượng nhận tin nhắn
+            this.outbox.push(mess);
+            mobile.inbox.push(mess);
             this.pin--;
         }
     }
@@ -100,8 +100,6 @@
     let Iphone = new Phone("Iphone", 100, "", [], [], true);
     let Samsung = new Phone("Nokia", 100, "", [], [], true);
     Iphone.sendSms(Samsung);
-    }
-
 </script>
 </body>
 </html>
