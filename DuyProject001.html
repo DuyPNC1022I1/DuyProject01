@@ -6,9 +6,18 @@
     <title>Web test bai hoc </title>
 </head>
 <body>
+<canvas id="MyCanvas" width = "200" height="100">
+<!--    Dùng để vẽ các hình ảnh trong trang web. Mặc định thẻ canvas sẽ không có đường viền, và nội dung rỗng
+        - Mặc định khi tạo: Canvas sẽ có 2 phần tử height và width, kích thước mặc định là 300px chiều rộng và 150px chiều cao-->
+</canvas>
 <dev id="Result"></dev>
 <script>
-
+<!--Sử dụng lineTo() để vẽ một đường thẳng-->
+let c = document.getElementById("MyCanvas");
+let ct = c.getContext("2d");
+ct.moveTo(0,0);
+ct.lineTo(200,100);
+ct.stroke();
 </script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<h2> Demo Dictionary</h2>
+<form>
+    <label> Nhập từ cần dịch tại đây: </label>
+    <input type="text" id="Inputhere">
+    <button onclick="translateDemo()" id="Translate">Click to Translate</button>
+    <hr>
+    <p id="Result">Kết quả: </p>
+</form>
+<script>
+function translateDemo() {
+    let arrayEnglish = ["Cat", "Dog", "Dolphin", "Lion", "Tiger", "Orca"];
+    let arrayVietnamese = ["Mèo", "Chó", "Cá voi", "Sư tử", "Hổ", "Cá voi sát thủ"];
+    let inputHere = document.getElementById("Inputhere").value;
+    let result = arrayEnglish.indexOf(inputHere);
+    if (result !== -1) {
+        document.getElementById("Result").innerHTML = arrayVietnamese[result];
+    }
+    else {
+        document.getElementById("Result").innerHTML = 'Không tìm thấy từ vừa nhập';
+    }
+}
+// function transcript() {
+//     //orange
+//     let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+//     let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+//     let string = document.getElementById("string").value;
+//     let index_eng = 0;
+//     let result = "";
+//     for (let i = 0; i < arr_eng.length; i++) {
+//         if (string == arr_eng[i]) {
+//             index_eng = i; //2
+//             for (let j = 0; j < arr_vie.length; j++) {
+//                 if (index_eng == j) { //2 == 2
+//                     result = arr_vie[j]; // táo
+//                 }
+//             }
+//         }
+//     }
+//     document.getElementById("result").innerHTML = result;
+// }
+</script>
+</body>
+</html>
