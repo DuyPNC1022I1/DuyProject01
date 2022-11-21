@@ -8,7 +8,28 @@
 <body>
 <dev id="Result"></dev>
 <script>
-
+    class Temperature {
+        constructor(temp) {
+            this.temp = temp
+        }
+        getTemp() {
+            return this.temp;
+        }
+        setTemp(temp) {
+            this.temp = temp;
+        }
+        changeF() {
+            let f = 9 / 5 * this.temp + 32;
+            return f;
+        }
+        changeKenvin() {
+            let kenvin = this.temp + 273.15;
+            return kenvin;
+        }
+    }
+    let temperature = new Temperature();
+    temperature.setTemp(25);
+    document.write('Result: <br>' + temperature.changeF() +' độ F <br>'  + temperature.changeKenvin() +' độ Kenvin');
 </script>
 </body>
 </html>
