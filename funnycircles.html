@@ -6,10 +6,45 @@
     <title>Web test bai hoc </title>
 </head>
 <body>
-<canvas id="Mycanvas" width="200" height="300"></canvas>
+<canvas id="Mycanvas"></canvas>
 <dev id="Result"></dev>
 <script>
+    class Circles {
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+    }
+    class createCircles {
+        var ctx = document.getElementById("Mycanvas").getContext("2d");
+        var circle = new Circles(500, 500, 80);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius,0 ,2 * Math.PI);
+        ctx.fill();
+    }
+    class getRandomHex {
+        return Math.floor(Math.random()*255);
+    }
 
+    class getRandomColor {
+        var red = getRandomHex();
+        var green = getRandomHex();
+        var blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green +")";
+    }
+
+    class createCircle {
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var radius = Math.floor(Math.random() * 80);
+        var color = getRandomColor();
+        var circle= new Circle(500, 500, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+    createCircle();
 
 </script>
 </body>
